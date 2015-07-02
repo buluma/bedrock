@@ -6,7 +6,7 @@ http://support.mozilla.org
 
 There are experts there who can help you sort things out.
 
-If you've tried that and haven't found a solution, you can write me back and I'll try to help.
+If you've tried that and haven't found a solution, you can write me back and I'll try to help with the issue at hand.
 
 Thanks,
 David
