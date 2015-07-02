@@ -624,6 +624,17 @@ def hello_screen_sharing(version):
 
     return version >= Version('38.0.5')
 
+def hello_minimal_ftu(version):
+    try:
+        if re.search('a\d$', version):
+            version = version[:-2]
+
+        version = Version(version)
+    except ValueError:
+        return False
+
+    return version >= Version('40.0')
+
 
 class HelloStartView(LatestFxView):
     non_fx_redirect = 'firefox.hello'
@@ -631,7 +642,9 @@ class HelloStartView(LatestFxView):
     def get_template_names(self):
         version = self.kwargs.get('version') or ''
 
-        if hello_screen_sharing(version):
+        if hello_minimal_ftu(version):
+            template = 'firefox/hello/start-40.0.html'
+        elif hello_screen_sharing(version):
             template = 'firefox/hello/start-38.0.5.html'
         else:
             template = 'firefox/hello/start.html'

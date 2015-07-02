@@ -1333,6 +1333,13 @@ PIPELINE_JS = {
         ),
         'output_filename': 'js/firefox_hello_start-bundle.js',
     },
+    'firefox_hello_start_minimal': {
+        'source_filenames': (
+            'js/firefox/australis/australis-uitour.js',
+            'js/firefox/hello/start-minimal.js',
+        ),
+        'output_filename': 'js/firefox_hello_start_minimal-bundle.js',
+    },
     'firefox_hello': {
         'source_filenames': (
             'js/firefox/australis/australis-uitour.js',
